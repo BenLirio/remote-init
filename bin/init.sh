@@ -14,5 +14,5 @@ apt-get install wget -y
 go_version=go1.15.2.linux-amd64.tar.gz
 wget -c https://golang.org/dl/$go_version
 shasum -a 256 $go_version
-tar -C /usr/local -svzf $go_version
+tar -C /usr/local -svzf $(go_version)
 export PATH=$PATH:/usr/local/go/bin
