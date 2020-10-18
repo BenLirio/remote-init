@@ -11,8 +11,7 @@ apt-get install git -y
 apt-get install wget -y
 
 # Install compilers
-go_version=go1.15.2.linux-amd64.tar.gz
-wget -c https://golang.org/dl/$go_version
-shasum -a 256 $go_version
-tar -C /usr/local -svzf $(go_version)
+wget -c https://golang.org/dl/go1.15.2.linux-amd64.tar.gz
+shasum -a 256 go1.15.2.linux-amd64.tar.gz
+tar -C /usr/local -xzf go1.15.2.linux-amd64.tar.gz
 export PATH=$PATH:/usr/local/go/bin
